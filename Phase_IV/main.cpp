@@ -61,7 +61,7 @@ int main()
     }
     
     //update shader
-    Shader ourShader("/Users/davidgutierrez/Desktop/OpenGL_Project/Externals/Include/Textures/4_texture.vs","/Users/davidgutierrez/Desktop/OpenGL_Project/Externals/Include/Textures/4_texture.fs");
+    Shader ourShader("Externals/Include/Textures/4_texture.vs","Externals/Include/Textures/4_texture.fs");
     
     
     //Set up vertex data ranges from -1 to 1
@@ -128,7 +128,7 @@ int main()
     
     int width, height, nrChannels;
     
-    unsigned char *data = stbi_load("/Users/davidgutierrez/Desktop/OpenGL_Project/Externals/Include/Images/container.jpg", &width, &height, &nrChannels, 0);
+    unsigned char *data = stbi_load("/Externals/Include/Images/container.jpg", &width, &height, &nrChannels, 0);
     
     if(data){
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
